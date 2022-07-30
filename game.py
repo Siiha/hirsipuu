@@ -7,9 +7,11 @@ Created on Sat Jul 30 14:14:09 2022
 """
 
 import random
-f = open("hirsipuu/kotus_sanat.txt","r")
-r = [i[:-1] for i in f.readlines()]
-l = tuple(r[random.randint(0, len(r))])
+def sana():
+    f = open("hirsipuu/kotus_sanat.txt","r")
+    r = [i[:-1] for i in f.readlines()]
+    return tuple(r[random.randint(0, len(r))])
+l = sana()
 s = ""
 y = ["_" for i in l]
 p = 0
@@ -24,3 +26,4 @@ while tuple(y)!=l and p < 5:
     print(p)
 if p == 5:
     print("hävisit")
+    print("".join(l))
