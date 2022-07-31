@@ -10,7 +10,7 @@ import random
 def sana():
     f = open("hirsipuu/kotus_sanat.txt","r")
     r = [i[:-1] for i in f.readlines()]
-    return tuple(r[random.randint(0, len(r))])
+    return r[random.randint(0, len(r))]
 l = sana()
 s = ""
 y = ["_" for i in l]
