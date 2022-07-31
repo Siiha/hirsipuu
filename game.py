@@ -15,7 +15,7 @@ l = sana()
 s = ""
 y = ["_" for i in l]
 p = 0
-while tuple(y)!=l and p < 5:
+while "".join(y)!=l and p < 5:
     print("".join(y))
     s+=input("Anna kirjain. aiemmin arvatut: "+s)
     for i in range(len(l)):
