@@ -7,8 +7,8 @@ Created on Sat Jul 30 14:14:09 2022
 """
 
 import random
-def sana():
-    f = open("hirsipuu/kotus_sanat.txt","r")
+def sana(x="kotus_sanat.txt"):
+    f = open("hirsipuu/"+x,"r")
     r = [i[:-1] for i in f.readlines()]
     return random.choice(r)
 sana = sana()
