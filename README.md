@@ -7,3 +7,5 @@ Jos haluat vaihtaa sanastoa.
 1. Tallenna txt-file hirsipuu/ kansioon.
 2. Valitse sanastosta kysyttäessä 1.
 3. Kirjoita haluamasi sanaston tiedostonimi.
+### Oman sanaston luominen
+Erota sanat rivinvaihdolla.
