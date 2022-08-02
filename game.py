@@ -15,7 +15,58 @@ l = sana()
 s = ""
 y = ["_" for i in l]
 p = 0
-while "".join(y)!=l and p < 5:
+
+HANGMANPICS = ['''
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+      |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+  |   |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+ /|   |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ /    |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ / \  |
+      |
+=========''']
+while "".join(y)!=l and p < len(HANGMANPICS)-1:
     print("".join(y))
     s+=input("Anna kirjain. aiemmin arvatut: "+s)
     for i in range(len(l)):
@@ -24,7 +75,7 @@ while "".join(y)!=l and p < 5:
     if s[-1] not in l:
         p += 1
     print("".join(y))
-    print(p)
-if p == 5:
-    print("hävisit")
+    print(HANGMANPICS[p])
+if p == len(HANGMANPICS)-1:
+    print(HANGMANPICS[-1])
     print("".join(l))
