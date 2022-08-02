@@ -11,10 +11,7 @@ def sana(x="kotus_sanat.txt"):
     f = open("hirsipuu/"+x,"r")
     r = [i[:-1] for i in f.readlines()]
     return random.choice(r)
-sana = sana()
-koitetut = ""
-y = ["_" for i in sana]
-p = 0
+
 
 HANGMANPICS = ['''
   +---+
@@ -66,6 +63,15 @@ HANGMANPICS = ['''
  / \  |
       |
 =========''']
+#sana = sana()
+koitetut = ""
+
+p = 0
+if int(input("Oletus:0, Oma sanasto:1 : ")):
+    sana=sana(input("Anna tiedoston nimi"))
+else:
+    sana=sana()
+y = ["_" for i in sana]
 while "".join(y)!=sana and p < len(HANGMANPICS)-1:
     print("".join(y))
     koitetut+=input("Anna kirjain. aiemmin arvatut: "+koitetut)
