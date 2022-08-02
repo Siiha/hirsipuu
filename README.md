@@ -5,4 +5,5 @@ Yksinkertainen hirsipuu-peli
 ## Oma sanavarasto
 Jos haluat vaihtaa sanastoa.
 1. Tallenna txt-file hirsipuu/ kansioon.
-2. muuta sanan arpomis funktion kutsua sana("file.txt").
+2. Valitse sanastosta kysyttäessä 1.
+3. Kirjoita haluamasi sanaston tiedostonimi.
