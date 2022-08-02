@@ -10,10 +10,10 @@ import random
 def sana():
     f = open("hirsipuu/kotus_sanat.txt","r")
     r = [i[:-1] for i in f.readlines()]
-    return r[random.randint(0, len(r))]
-l = sana()
-s = ""
-y = ["_" for i in l]
+    return random.choice(r)
+sana = sana()
+koitetut = ""
+y = ["_" for i in sana]
 p = 0
 
 HANGMANPICS = ['''
@@ -66,16 +66,16 @@ HANGMANPICS = ['''
  / \  |
       |
 =========''']
-while "".join(y)!=l and p < len(HANGMANPICS)-1:
+while "".join(y)!=sana and p < len(HANGMANPICS)-1:
     print("".join(y))
-    s+=input("Anna kirjain. aiemmin arvatut: "+s)
-    for i in range(len(l)):
-        if l[i] in s:
-            y[i] = l[i]
-    if s[-1] not in l:
+    koitetut+=input("Anna kirjain. aiemmin arvatut: "+koitetut)
+    for i in range(len(sana)):
+        if sana[i] in koitetut:
+            y[i] = sana[i]
+    if koitetut[-1] not in sana:
         p += 1
     print("".join(y))
     print(HANGMANPICS[p])
 if p == len(HANGMANPICS)-1:
     print(HANGMANPICS[-1])
-    print("".join(l))
+    print(sana)
