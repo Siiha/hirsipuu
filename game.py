@@ -68,7 +68,7 @@ koitetut = ""
 
 p = 0
 if int(input("Oletus:0, Oma sanasto:1 : ")):
-    sana=sana(input("Anna tiedoston nimi"))
+    sana=sana(input("Anna tiedoston nimi: "))
 else:
     sana=sana()
 y = ["_" for i in sana]
