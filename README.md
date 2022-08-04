@@ -1,5 +1,5 @@
 # hirsipuu
-Yksinkertainen hirsipuu-peli
+Yksinkertainen hirsipuu-peli komentoriviin
 ## Ajo-ohje
 1. Aja komentorivissä komento python hirsipuu/game.py.
 ## Oma sanavarasto
